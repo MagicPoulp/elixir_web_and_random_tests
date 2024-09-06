@@ -1,0 +1,75 @@
+-- To start node server
+su - developer
+node ~/tmp/local_server/local_server2.js
+
+-- To check the database
+psql -h localhost -U ems
+select * from weather.forecast;
+DELETE FROM weather.forecast;
+
+1 --> show systemd that starts a chroot with debian 12
+lsb_release -a
+schroot -c test  -- sh -c "lsb_release -a"
+a folder contains Debian 12 more recent
+ls /chroot/debian/debian12/debian/
+
+run groups to show the uses is non priviledged, no sudo
+
+delete well the database first
+less /home/test/.config/systemd/user/try13.service
+systemctl --user daemon-reload
+systemctl --user stop try13
+rm /var/log/test/thierry-scripts-std*
+systemctl --user start try13
+systemctl --user status try13
+IMPORTANT: show well the tree of sub-processes that are linked and supervised by systemd
+show the memory boundary
+journalctl | less
+
+tail -F /var/log/test/thierry-scripts-stdout.log
+tail -F /var/log/test/thierry-scripts-stderr.log
+check the database
+
+show a KILL on the main that creates an new PID
+stop systemd service and show status with exit-code that means non 0 return code
+
+IMPORTANT: all the tree of stderr/stderr is captured in the systemd log file
+automatic in Elixir
+for the wrapper of the CPP code, we track the data on STDERR from the CPP process, with a callback
+(like the stdout callback in place the cpp wrapper in Elixir)
+
+For next part run "schroot -c test"
+
+2 --> start running the Elixir worker outside systemd
+show the Elixir code that is much simpler
+show the IO.inspect
+change the workers in supervisor.ex
+
+mix run --no-halt
+
+3 --> show running the CPP worker
+
+4 --> show the specified message format sent in 2 directions, with a callback
+
+IMPORTANT: message passing in 2 directions between Elixir and CPP
+
+mix run --no-halt
+
+5 --> FAULT-TOLERANCE programming-model:
+reopen the subject that of what happens when a KILL signal is sent to the main process's pid with kill -KILL
+show the status before and after the kill -KILL pid
+systemctl --user status try13
+show the logged exception in the stdout log
+Notice that it is on stdout and not on stderr by design since Elixir has a fault-tolerant model.
+It is considered normal operation to have sometimes a process that crash from exceptions, stdrr is only for critical errors,
+or too many restarts in a short time
+
+It is the fault-tolerant model that makes high quality products
+If there is a leak, it will be detected, but the product may work fine until the next software update.
+
+IMPORTANT:
+FAULT-TOLERANCE means:
+- we log errors to fix them in a next patch
+- we can recover from errors to ensure the product still works
+
+---------------------

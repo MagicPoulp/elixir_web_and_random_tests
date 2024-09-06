@@ -1,0 +1,27 @@
+cat /home/test/.config/systemd/user/try13.service
+
+systemd/user is a global for all users but not as root
+but then the standard output/error redirect does not work
+Hence we use the one in the home directory
+And there must be a proper login of the user
+
+systemctl --user daemon-reload
+systemctl --user start try13
+systemctl --user status try13
+systemctl --user stop try13
+journalctl | less
+tail /var/log/test/thierry-script-stderr.log
+
+-----
+
+to run stuff, we need a test and a developer user both in the host and in the chroot
+install all programs logged in a separate file of the repository
+change the shell to bash in the passwd
+add the configuration debian chroot to avoid chroot to spawn daemons
+all config files are in teh repo, for systemd and the schroot
+the home folder for developer is copies inside the home folder of test for the environment, then all must be compiled inside the chroot in the test folder.
+we need gcc-multilib
+and several libraries of libstdc++ of different versions are needed, libcat, etc
+
+
+

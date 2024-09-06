@@ -1,0 +1,11 @@
+[Unit]
+Description=Elixir try13 demo service
+
+[Service]
+Type=simple
+ExecStart=schroot -c test  -- sh -c "cd /home/test/repos/crypto_prices && mix run --no-halt"
+MemoryAccounting=true
+MemoryHigh=40000K
+MemoryMax=40000K
+StandardOutput=append:/var/log/test/thierry-scripts-stdout.log
+StandardError=append:/var/log/test/thierry-scripts-stderr.log

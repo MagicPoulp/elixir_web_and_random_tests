@@ -1,0 +1,6 @@
+
+we need a new test user created with sudo passwd test
+
+to give acces to another user to the test/repos
+sudo setfacl -R -m u:developer:rwx repos/
+sudo nano /etc/schroot/chroot.d/bookworm-test

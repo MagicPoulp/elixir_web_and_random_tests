@@ -1,0 +1,113 @@
+    1  apt-get update
+    2  apt-get install lsb-release
+    3  lsb_release 
+    4  lsb_release -a
+    5  apt install erlang-dev elixir
+    6  apt install git
+    7  apt install emacs
+    8  apt install emacs
+    9  e .
+   10  emacs .
+   11  reset
+   12  apt install emacs
+   13  apt install emacs
+   14  apt install emacs
+   15  ls /dev/
+   16  ls /dev/pts/
+   17  apt install emacs
+   18  ls /dev/pt
+   19  ls /dev/pts/
+   20  ls /dev/pts/
+   21  apt install emacs
+   22  apt install emacs --reinstall
+   23  e .
+   24  emacs .
+   25  ll
+   26  passwd root
+   27   /home/developer/repos/gateway/ems-weather-acq/build_linux/Release/main
+   28  ll
+   29  cat ./usr/sbin/policy-rc.d
+   30  cat /usr/sbin/policy-rc.d
+   31  cat /usr/sbin/
+   32  cat > ./usr/sbin/policy-rc.d <<EOF
+   33  #!/bin/sh
+   34  exit 101
+   35  EOF
+   36  chmod a+x ./usr/sbin/policy-rc.d
+   37  apt-get install python3 python-pip python-venv
+   38  apt-get update && apt-get install python3 python3-pip python-venv
+   39  apt-get update && apt-get install python3 python3-pip python-venv
+   40  apt-get update && apt-get install python3 python3-pip python-venv
+   41  apt-get update && apt-get install python3 python3-pip python-venv
+   42  reset
+   43  apt-get update && apt-get install python3 python3-pip python-venv
+   44  ifconfig
+   45  ipconfig
+   46  ip a
+   47  ip a
+   48  apt-get install python3 python3-pip python-venv
+   49  apt-get install python3 python3-pip python3-venv
+   50  apt-get install python3 python3-pip python3-venv
+   51  apt-get update
+   52  apt clean
+   53  apt autoclean
+   54  apt-get update
+   55  apt autoclean
+   56  apt clean
+   57  cat /etc/resolv.conf 
+   58  apt clean
+   59  apt autoclean
+   60  apt-get update
+   61  cat /etc/apt/sources.list
+   62  cat /etc/apt/sources.list
+   63  nano /etc/apt/sources.list
+   64  apt-get update
+   65  nano /etc/apt/sources.list
+   66  apt-get update
+   67  nano /etc/apt/sources.list
+   68  apt autoclean
+   69  apt clean
+   70  apt-get update
+   71  apt clean
+   72  apt-get update
+   73  apt-get update
+   74  nano /etc/apt/sources.list
+   75  apt-get update
+   76  apt-get install python3 python3-pip python3-venv
+   77  sudo apt install gcc-multilib
+   78  install gcc-multilib
+   79  apt install gcc-multilib
+   80  apt install -s libstdc++6:i386
+   81  dpkg --add-architecture i386
+   82  apt install -s libstdc++6:i386
+   83  apt-cache search libstdc++
+   84  apt-cache search libstdc++11
+   85  dpkg -l | grep stdc++
+   86  apt-get install -s libstdc++-10-dev:i386
+   87  apt-get install -s lib32stdc++-10-dev:i386
+   88  apt-get install -s lib32stdc++-10-dev
+   89  apt-get install -s lib32stdc++-12-dev
+   90  apt-get install lib32stdc++-12-dev
+   91  dpkg -l | grep stdc++
+   92  apt-get install libx32stdc++-12-dev
+   93  sudo dpkg -l | grep openssl
+   94  dpkg -l | grep openssl
+   95  dpkg -l | grep libssl
+   96  apt-get install libssl-dev
+   97  dpkg -l | grep libssl
+   98  apt-get install libssl-dev:i386
+   99  apt-get install libssl:i386
+  100  dpkg -l | grep openssl
+  101  apt-get install openssl-dev:i386
+  102  apt-get install openssl-dev
+  103  apt-get install libssl-dev:i386
+  104  dpkg --add-architecture i386
+  105  apt-get update
+  106  apt-get install libssl-dev:i386
+  107  dpkg -l | grep libcap
+  108  apt-get install libcap-dev:i386
+  109  apt-get install libcap
+  110  apt-get install libcap-dev
+  111  gs
+  112  history 
+  113  history > history_chroot
